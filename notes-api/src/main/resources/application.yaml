@@ -1,3 +1,13 @@
 spring:
   application:
     name: notes-api
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8085/realms/develop
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
