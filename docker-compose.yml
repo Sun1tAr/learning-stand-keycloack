@@ -1,0 +1,25 @@
+services:
+  keycloack:
+    image: quay.io/keycloak/keycloak:26.6
+    container_name: kc-core
+    command: start-dev
+    ports:
+      - "8085:8080"
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+
+  postgres:
+    image: postgres:17-alpine
+    container_name: domain-db
+    environment:
+      POSTGRES_DB: notes_db
+      POSTGRES_USER: db_user
+      POSTGRES_PASSWORD: db_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

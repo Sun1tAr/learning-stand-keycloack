@@ -1,0 +1,10 @@
+###
+POST http://localhost:8085/realms/develop/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=test-client
+&
+client_secret=jFCW30BraHF7Q34zxQjl3qRTsU3rhDlj
+&
+grant_type=client_credentials
+###
