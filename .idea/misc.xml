@@ -6,6 +6,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/notes-api/pom.xml" />
+        <option value="$PROJECT_DIR$/bff/pom.xml" />
       </list>
     </option>
   </component>

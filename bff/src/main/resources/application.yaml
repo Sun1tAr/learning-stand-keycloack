@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: bff
+
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloack:
+            client-id: bff
+            client-secret: qhZcSYqPu9tMlSbwTgcK8NAwM7IYyitD
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8081/login/oauth2/code/keycloack
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          keycloack:
+            issuer-uri: http://localhost:8085/realms/develop
